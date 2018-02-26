@@ -1,0 +1,124 @@
+// -----------------------------------
+//  Top filters: Block types & Search
+// -----------------------------------
+.ugb-filters-top {
+  box-shadow: 0 3px 18px 2px #eaeaea;
+
+  @include desktop-large {
+    display: flex;
+    align-items: center;
+    background: #fff;
+  }
+}
+
+.ugb-filters-category {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  background: #fff;
+  overflow-x: auto;
+
+  @include desktop-large {
+    overflow-x: initial;
+  }
+}
+
+.ugb-category-label {
+  padding: 0 20px;
+}
+
+.ugb-filters-category-list {
+  display: flex;
+  flex: 1;
+  margin: 0;
+}
+
+.ugb-category-item {
+  border-left: 1px solid #f3f3f3;
+  margin-bottom: 0;
+
+  &:last-child {
+    border-right: 1px solid #f3f3f3;
+  }
+}
+
+.ugb-category-button {
+  padding: 2rem 1rem;
+  border: 0;
+  background: transparent;
+
+  &:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+
+  &.is-active {
+    background: #fbfbfb;
+    color: $primary-color;
+  }
+}
+
+// -------------------------
+// Bottom filters: Status
+// -------------------------
+.ugb-filters-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 20px;
+
+  @include desktop-large {
+    justify-content: flex-end;
+    padding-left: 0;
+    margin-right: 50px;
+  }
+}
+
+.ugb-filters-status {
+  display: flex;
+  margin: 0;
+}
+
+.ugb-status-list-item {
+  margin-bottom: 0;
+}
+
+.ugb-status-list-button {
+  padding: 1rem 0.5rem;
+  border: 0;
+  background: transparent;
+
+  &:hover {
+    color: $primary-color;
+    cursor: pointer;
+  }
+
+  &.is-active {
+    color: $primary-color;
+  }
+}
+
+// -------------------------
+// Search
+// -------------------------
+.ugb-filters-search {
+  flex: 0 0 40%;
+  padding: 0 20px;
+  margin-top: 10px;
+  text-align: right;
+
+  @include desktop-large {
+    flex: 1 1 auto;
+    padding-right: 50px;
+    margin-top: 0;
+  }
+
+  & input { /* stylelint-disable-line scss/selector-no-redundant-nesting-selector */
+    width: 100%;
+    height: 40px;
+
+    @include desktop-large {
+      width: 300px;
+    }
+  }
+}

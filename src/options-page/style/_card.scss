@@ -1,0 +1,88 @@
+// -----------------------
+// Styles for single card
+// -----------------------
+.ugb-cards {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.ugb-card {
+  position: relative;
+  display: flex;
+  flex: 0 0 calc(100% - 5rem);
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1.5rem;
+  margin: 1rem;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 10, 0.1);
+
+  @include tablet {
+    flex: 0 0 calc(50% - 5rem);
+  }
+
+  @include desktop {
+    flex: 0 0 calc(33.333% - 5rem);
+  }
+
+  @include desktop-large {
+    flex: 0 0 calc(25% - 5rem);
+  }
+
+  @include desktop-xxl {
+    flex: 0 0 calc(20% - 5rem);
+  }
+}
+
+.ugb-card-status {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  width: 10px;
+  height: 10px;
+  background-color: #bdbdbd;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+}
+
+.ugb-card-body {
+  opacity: 0.3;
+  transition: opacity 0.3s;
+
+  &.is-active {
+    opacity: 1;
+  }
+}
+
+.ugb-card-status.is-active {
+  background-color: $secondary-color;
+}
+
+.ugb-card-title {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.ugb-card-description {
+  font-size: 12px;
+}
+
+.ugb-card-button {
+  align-self: flex-start;
+  padding: 6px 15px;
+  background: #333;
+  color: #fff;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  &.is-disabled {
+    cursor: not-allowed;
+  }
+
+  &.is-unregistered {
+    opacity: 0.3;
+  }
+}
