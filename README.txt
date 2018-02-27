@@ -29,8 +29,7 @@ Plugin that provides an option to unregister default Gutenberg Blocks.
  
 Of course you can! Default capability for seeing the plugin's option panel is 'edit_posts', but you can easily change it to whatever you like using filters. Just drop the line below into your functions.php:
 
-`if ( is_plugin_active( 'unregister-gutenberg-blocks/unregister-gutenberg-blocks.php' ) ) {
-	add_filter( 'ugb_capability_filter', 'your_prefix_change_ugb_plugin_capability' );
+`add_filter( 'ugb_capability_filter', 'your_prefix_change_ugb_plugin_capability' );
 
 	function your_prefix_change_ugb_plugin_capability() {
 		return 'manage_options'; // or a custom capability of your choice
